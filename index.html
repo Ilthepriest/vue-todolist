@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="container">
+            <div class="logo">
+                <img src="https://yt3.ggpht.com/ytc/AKedOLTO2XVhtyMr24Dnz6QJ-Lsj_05XHim-qMoF6PRc=s900-c-k-c0x00ffffff-no-rj" alt="">
+                <h1>booelan</h1>
+            </div>
+            <form action="#" @submit.prevent="addTodo">
+                <div class="input">
+                    <input type="text" required placeholder="Nuovo Todo" v-model="todo.text" @keyup.enter="addTodo">
+                    <button type="text">Aggiungi</button>
+                </div>
+            </form>
+
+            <div class="todoList">
+                <ul v-if="todos.length > 0">
+                    <li v-for="(todo, index) in todos"
+                    v-bind:class="todos[index].done === true ? 'testoBarrato' : ''"
+                    @click="barroEsbarro(index)">
+                    {{todos[index].text}}<i class="fa-solid fa-xmark" @click="removeTodo(index)"></i></li>
+                    
+                </ul>
+                <p v-else>NON HAI COSE DA FARE</p>
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <script src="./app.js"></script>
+</body>
+</html>

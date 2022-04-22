@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 60%;
+    height: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+button{
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.todoList{
+    background-color: #F5F7F7;
+    width: 50%;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 90px;
+    box-shadow: 4px 4px 4px 4px  #001533;
+}
+
+li{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+i{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.testoBarrato{
+    text-decoration: line-through;
+}
+
+h1{
+    font-size: 100px;
+    color: #001533;
+}
+
+img{
+    
+    width: 150px
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
