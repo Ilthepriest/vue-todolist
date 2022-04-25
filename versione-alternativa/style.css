@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 80px;
+}
+
+.container{
+    margin: 100px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.todoList,
+.trashed,
+.completed{
+    width: 300px;
+    height: 500px;
+    background-color: #F5F7F7;
+    border-radius: 20px;
+    margin: 10px 20px;
+    box-shadow: 4px 4px 4px 4px #001533;
+}
+
+.todoList{
+    background-color: rgba(0, 225, 101, 0.1) ;
+}
+
+.completed{
+    background-color: rgba(12, 107, 249, 0.1);
+}
+
+.trashed{
+    background-color: rgba(249, 12, 83, 0.1);
+}
+
+ul{
+    padding: 30px;
+    list-style-type: none;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 3px;
+}
+li span{
+    width: 170px;
+}
+.action-buttons{
+    display: flex;
+    justify-content: end;
+}
+.action-buttons i{
+    margin: 5px;
+}
+
+i{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+img{
+    width: 150px;  
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.tasks{
+    display: flex;
+}
+
+input{
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+}
+
+.fa-check:hover{
+    color: green;
+}
+
+.fa-trash-can:hover{
+    color: red;
+}
+
+.fa-arrow-rotate-left:hover,
+.fa-trash-can-arrow-up:hover{
+    color: lightseagreen;
+}
+
+a:hover{
+    background-color: red;
+}

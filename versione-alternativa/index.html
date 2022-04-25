@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="container">
+            <div class="logo">
+                <img src="https://yt3.ggpht.com/ytc/AKedOLTO2XVhtyMr24Dnz6QJ-Lsj_05XHim-qMoF6PRc=s900-c-k-c0x00ffffff-no-rj" alt="">
+                <h1>boolean</h1>
+            </div>
+            <form action="#" @submit.prevent="addToList">
+                <input type="text" placeholder="Nuovo todo " @keyup.enter="submit" minlength="4" required  v-model="toDoInput">
+                <button type="submit">Add</button>
+            </form>
+
+          <div class="tasks">
+            <div class="todoList">
+                <ul>
+                    <li>TODO LIST</li>
+                    <li v-for="(item, index) in list" :key="item">
+                        <span contenteditable="true">{{item}}</span>
+                        <div class="action-buttons">
+                            <i class="fa-solid fa-check" @click="moveToCompleted(index)"></i>
+                            <i class="fa-solid fa-trash-can" @click="moveTrashed(index)"></i>    
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+            <div class="completed">
+                <ul>
+                    <li>COMPLETED</li>
+                    <li v-for="(item, index) in listCompleted" :key="index">{{item}} <i class="fa-solid fa-arrow-rotate-left" @click="returnList(index)"></i></li> 
+                </ul>
+            </div>
+            <div class="trashed">
+                <ul>
+                    <li>TRASHED (<a href="#" @click="removeAll">Empety bin</a>)</li>
+                    <li v-for="(item, index) in listTrashed" :key="index">{{item}} <i class="fa-solid fa-trash-can-arrow-up" @click="returnListToTrashed(index)"></i></li> 
+                </ul>
+            </div>
+          </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -14,11 +14,11 @@
         <div class="container">
             <div class="logo">
                 <img src="https://yt3.ggpht.com/ytc/AKedOLTO2XVhtyMr24Dnz6QJ-Lsj_05XHim-qMoF6PRc=s900-c-k-c0x00ffffff-no-rj" alt="">
-                <h1>booelan</h1>
+                <h1>boolean</h1>
             </div>
             <form action="#" @submit.prevent="addTodo">
                 <div class="input">
-                    <input type="text" required placeholder="Nuovo Todo" v-model="todo.text" @keyup.enter="addTodo">
+                    <input type="text" required placeholder="Nuovo Todo" v-model="todo.text" @key.enter="addTodo">
                     <button type="text">Aggiungi</button>
                 </div>
             </form>
